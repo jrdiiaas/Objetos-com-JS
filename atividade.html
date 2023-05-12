@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ptBR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 08 - Objetos</title>
+</head>
+<body>
+    <form id="form-novo-atleta">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required>
+        <label for="esporte">Esporte:</label>
+        <input type="text" id="esporte" required>
+        <button type="submit">+</button>
+    </form>
+    <div id="atletas">
+        <!-- elementos filhos aqui / atletas -->
+    </div>
+    <script>
+        const atletas = [
+        {nome: "Neymar", esporte: "Futebol"},
+        {nome: "Bruno", esporte: "Cartão"},
+        {nome: "Betina", esporte: "Empiricus"}
+        ]
+        const listaAtletas = document.getElementById("atletas")
+        atletas.forEach((e) => {
+            const p = document.createElement("p")
+            p.textContent = `Nome: ${e.nome} || Esporte: ${e.esporte}`
+            listaAtletas.appendChild(p)
+        })
+    </script>
+</body>
+</html>
