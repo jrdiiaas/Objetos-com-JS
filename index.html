@@ -1,0 +1,34 @@
+<script>
+console.log("***Conceituando OBJETO");
+var animal = {
+    nome:"Lux",
+    tipo:"Shitzu",
+    idade:2
+};
+console.log(animal.nome + " é da raça " + animal.tipo + " e tem " + animal.idade + " anos.");
+
+console.log("\n");
+console.log("***Usando função dentro do OBJETO");
+var cidade = {
+    nome:"Salvador",
+    PIB:63804000000,
+    populacao:3500000,
+    PibPerCapta: function() {
+        return this.PIB / this.populacao
+    },
+
+}
+console.log("Cidade: " + cidade['nome']);
+console.log("PIB: " + cidade['PIB']);
+console.log("PIB PerCapta: " + cidade['PibPerCapta']());
+
+console.log("\n");
+console.log("***Acessando Arrays dentro do OBJETO");
+var personagens = [
+    { nome : "Goku", seriado : "Dragon Ball" },
+    { nome : "Tamjiro", seriado : "Demon Slayer" },
+    { nome : "Seiya", seriado : "Cavaleiros do Zodíaco" }
+]
+console.log(personagens[2].nome + " não é do seriado " + personagens[0].seriado + ".")
+
+</script>
