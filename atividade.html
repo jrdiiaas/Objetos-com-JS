@@ -18,6 +18,7 @@
         <!-- elementos filhos aqui / atletas -->
     </div>
     <script>
+        // Exercício 01
         const atletas = [
         {nome: "Neymar", esporte: "Futebol"},
         {nome: "Bruno", esporte: "Cartão"},
@@ -27,6 +28,21 @@
         atletas.forEach((e) => {
             const p = document.createElement("p")
             p.textContent = `Nome: ${e.nome} || Esporte: ${e.esporte}`
+            listaAtletas.appendChild(p)
+        })
+
+        // Exercício 02
+        const formNovoAtleta = document.getElementById("form-novo-atleta")
+        formNovoAtleta.addEventListener("submit", (e) => {
+            e.preventDefault()
+            const nome = document.getElementById("nome").value
+            const esporte = document.getElementById("esporte").value
+
+            const novoAtleta = {nome, esporte}
+            atletas.push(novoAtleta)
+
+            const p = document.createElement("p")
+            p.textContent = `Nome: ${novoAtleta.nome} || Esporte: ${novoAtleta.esporte}`
             listaAtletas.appendChild(p)
         })
     </script>
